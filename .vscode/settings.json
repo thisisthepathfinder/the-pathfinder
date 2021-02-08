@@ -1,0 +1,9 @@
+{
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#00e6e6",
+    "tab.activeForeground": "#000000",
+    "tab.activeBorder": "#FFFFFF",
+    "tab.unfocusedActiveBackground" : "#325b6b",
+    "tab.unfocusedActiveForeground": "#eeeeee",
+  },
+}

@@ -1,0 +1,21 @@
+{
+	"Vue": {
+		"prefix": "v-default",
+		"body": [
+			"<template>",
+			"\t$1",
+			"</template>",
+			"",
+			"<script>",
+			"export default {",
+			"\t$2",
+			"}",
+			"</script>",
+			"",
+			"<style lang=\"scss\" scoped>",
+			"\t$3",
+			"</style>",
+		],
+		"description": "Default scaffold for Vue: The Pathfinder."
+	}
+}
