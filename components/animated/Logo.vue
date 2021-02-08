@@ -10,11 +10,6 @@
     style="enable-background:new 0 0 260 360.6;"
     xml:space="preserve"
   >
-    <style type="text/css">
-      .st0{fill:#D81B5A;}
-      .st1{fill:#FEBF4F;}
-      .st2{fill:#00AEEF;}
-    </style>
     <polygon
       class="st0"
       points="45,360.6 45,60.6 245,60.6 "
@@ -62,5 +57,17 @@ export default {
   display: block;
   max-width: 100%;
   max-height: 100%;
+}
+
+.st0{
+  fill:#D81B5A;
+}
+
+.st1{
+  fill:#FEBF4F;
+}
+
+.st2{
+  fill:#00AEEF;
 }
 </style>
