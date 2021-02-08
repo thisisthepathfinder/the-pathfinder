@@ -1,8 +1,6 @@
 # References
 - Vue MDI List: https://pictogrammers.github.io/@mdi/font/5.4.55/
 
-# Testing Repo
-
 # Target Age Group
 - Minimum 9 years old.
 
