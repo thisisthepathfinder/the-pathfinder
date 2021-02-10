@@ -1,11 +1,14 @@
 # References
 - Vue MDI List: https://pictogrammers.github.io/@mdi/font/5.4.55/
 
+# Questions
+- Passing event down through wrapper components?
+
+# To Do
+- Integrate internationalization structure.
+
 # Target Age Group
 - Minimum 9 years old.
-
-# Considerations
-- Add pay estimate? Glassdoor API: https://www.glassdoor.com/developer/index.htm
 
 # Design Guidelines
 - Games should have individual components for tutorial because the game

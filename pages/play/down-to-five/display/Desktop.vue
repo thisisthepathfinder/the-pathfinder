@@ -5,8 +5,7 @@
         v-if="discarded.length > 0"
         label="Discard Pile"
         :count="discarded.length"
-        emit-event="view-discarded"
-        @view-discarded="viewDiscarded"
+        :click-function="viewDiscarded"
       >
         <template #action>
           View Discarded ({{ discarded.length }})
@@ -64,8 +63,11 @@
           label="More Cards"
           :button-vert-margin="1"
           :count="inHand.length - maxHandSize"
+          :click-function="viewInHand"
         >
-          <template #action>
+          <template
+            #action
+          >
             View Saved ({{ inHand.length - maxHandSize }})
           </template>
         </GameCardLabel>
@@ -134,7 +136,15 @@ export default {
       this.$emit('open-modal', {
         type: 'discarded',
         data: {
-          discarded: this.discarded
+          cardArray: this.discarded
+        }
+      })
+    },
+    viewInHand () {
+      this.$emit('open-modal', {
+        type: 'inHand',
+        data: {
+          cardArray: this.inHand
         }
       })
     }

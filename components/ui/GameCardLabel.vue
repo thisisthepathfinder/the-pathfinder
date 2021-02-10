@@ -1,5 +1,7 @@
 <template>
-  <div class="game-card-wrapper">
+  <div
+    class="game-card-wrapper"
+  >
     <div
       class="game-card"
       :style="cardObj"
@@ -25,7 +27,7 @@
         >
           <vButton
             :style="buttonObj"
-            @click="emitClick"
+            @click="clickFunction"
           >
             <slot name="action" />
           </vButton>
@@ -68,9 +70,9 @@ export default {
       type: Number,
       default: 2
     },
-    emitEvent: {
-      type: String,
-      default: ''
+    clickFunction: {
+      type: Function,
+      default: null
     }
   },
   computed: {
@@ -88,11 +90,6 @@ export default {
         fontSize: `${ this.buttonTextSize }rem`,
         margin: `${ this.buttonVertMargin }rem 0`
       }
-    }
-  },
-  methods: {
-    emitClick () {
-      this.$emit(this.emitEvent)
     }
   }
 }

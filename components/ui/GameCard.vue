@@ -6,7 +6,7 @@
     >
       <div
         class="front"
-        @click="showInfo"
+        @click="toggleInfo"
       >
         <div class="basic-info">
           <h1>
@@ -30,7 +30,10 @@
             >V</span>
           </div>
           <div class="per-info-type-wrapper">
-            <span :style="additionalObj" />
+            <span
+              :style="additionalObj"
+              @click="viewInfo"
+            >I</span>
           </div>
           <div class="per-info-type-wrapper">
             <span :style="additionalObj" />
@@ -46,8 +49,6 @@
 
 <script>
 // YT thumbnail ref: https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
-// https://www.npmjs.com/package/vue-resize-text
-// Could consider this library.
 import fitty from 'fitty'
 export default {
   props: {
@@ -123,7 +124,10 @@ export default {
         this.$emit('open-modal', modalData)
       }
     },
-    showInfo () {
+    viewInfo () {
+
+    },
+    toggleInfo () {
       this.showAdditionalInfo = !this.showAdditionalInfo
     }
   }

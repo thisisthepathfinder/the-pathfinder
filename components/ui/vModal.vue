@@ -16,10 +16,10 @@
         />
       </div>
       <div
-        v-if="modalData.type === 'discarded'"
+        v-if="modalData.type === 'discarded' || modalData.type === 'inHand'"
         class="card-grid"
       >
-        <GridCard :card-array="modalData.data.discarded" />
+        <GridCard :card-array="modalData.data.cardArray" />
       </div>
     </div>
   </div>
