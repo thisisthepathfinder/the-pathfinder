@@ -1,12 +1,14 @@
 <template>
-  <input
-    :type="type"
-    :name="name"
-    :placeholder="placeholder"
-    v-bind="$attrs"
-    :value="value"
-    v-on="inputListeners"
-  >
+  <div class="input">
+    <input
+      :type="type"
+      :name="name"
+      :placeholder="placeholder"
+      v-bind="$attrs"
+      :value="value"
+      v-on="inputListeners"
+    >
+  </div>
 </template>
 
 <script>
@@ -48,7 +50,11 @@ export default {
 <style lang="scss" scoped>
 input {
   display: block;
-  margin: 1rem 0;
+  width: 100%;
+  padding: $min-padding;
+}
+
+.input {
   padding: $min-padding;
 }
 </style>

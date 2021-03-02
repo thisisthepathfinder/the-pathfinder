@@ -49,7 +49,9 @@ export default {
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     // https://www.npmjs.com/package/@nuxtjs/style-resources
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    // https://i18n.nuxtjs.org/
+    'nuxt-i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -84,7 +86,8 @@ export default {
   googleFonts: {
     families: {
       Roboto: [400,700,900],
-      'Squada One': 400
+      'Squada One': 400,
+      'Material Icons': true
     }
   },
 
@@ -94,7 +97,24 @@ export default {
       '@/design/_transitions.scss',
       '@/design/_elements.scss',
       '@/design/_layouts.scss',
-      '@/design/_styles.scss'
+      '@/design/_styles.scss',
+      '@/design/_override.scss'
     ],
-   }
+  },
+
+  i18n: {
+    lazy: true,
+    langDir: 'src/locales/',
+    strategy: 'no_prefix',
+    defaultLocale: 'en',
+    locales: [
+      {
+        code: 'en',
+        file: 'en.js'
+      }
+    ]
+  },
+  router: {
+    middleware: ['locale-loader']
+  }
 }

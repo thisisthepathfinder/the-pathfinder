@@ -2,16 +2,17 @@
   <div class="play">
     <NavPlay class="nav" />
     <Nuxt class="viewport" />
-    <div class="notice">
-      <p>This site is in active development, there will be a lot of rough edges and placeholder elements.</p>
-    </div>
+    <ManagerSnackbar />
+    <InDevNotice />
   </div>
 </template>
 
 <script>
 import NavPlay from '@/components/ui/NavPlay'
+import ManagerSnackbar from '@/components/layout/ManagerSnackbar'
+import InDevNotice from '@/components/ui/InDevNotice'
 export default {
-  components: { NavPlay }
+  components: { NavPlay, ManagerSnackbar, InDevNotice }
 }
 </script>
 

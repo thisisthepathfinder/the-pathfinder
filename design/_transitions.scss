@@ -1,3 +1,35 @@
 $fast: 0.25s;
 $med: 0.5s;
 $slow: 1s;
+
+$small-nudge: 0.25rem;
+$med-nudge: 0.5rem;
+$large-nudge: 1rem;
+
+.slide-up-enter-active {
+  transition: all $med ease;
+}
+.slide-up-leave-active {
+  transition: all $med cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-up-enter, .slide-up-leave-to {
+  opacity: 0;
+}
+.slide-up-enter {
+  transform: translateX($small-nudge);
+}
+.slide-up-leave-to {
+  transform: translateX(-$small-nudge);
+}
+.slide-up-move {
+  transition: transform $med;
+}
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}

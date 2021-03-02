@@ -31,8 +31,20 @@
 </template>
 
 <script>
+/**
+ * Elements I need
+ *  - Game title
+ *  - Game description
+ *  - Age filter
+ *  - Game icon? But larger like a thumbnail? Maybe with a live-action demo?
+ *
+ * References
+ *  - General layout with thumbnails: https://i.redd.it/f3669mwk6fv21.png
+ *  - Quite animation for certain events: https://dribbble.com/shots/6686958-Just-funny-chemistry
+ *  - Idle animation: https://mir-s3-cdn-cf.behance.net/project_modules/disp/ba29ca63925381.5ac1aa5c82d8a.gif
+ */
 export default {
-
+  layout: 'play'
 }
 </script>
 

@@ -8,7 +8,7 @@
         :click-function="viewDiscarded"
       >
         <template #action>
-          View Discarded ({{ discarded.length }})
+          {{ $t('game.viewDiscarded') }} ({{ discarded.length }})
         </template>
       </GameCardLabel>
     </div>
@@ -31,12 +31,12 @@
             <div class="selection">
               <div class="save">
                 <vButton @click="saveCard(card)">
-                  Save
+                  {{ $t('game.save') }}
                 </vButton>
               </div>
               <div class="discard">
                 <vButton @click="discardCard(card)">
-                  Discard
+                  {{ $t('game.discard') }}
                 </vButton>
               </div>
             </div>
@@ -68,7 +68,7 @@
           <template
             #action
           >
-            View Saved ({{ inHand.length - maxHandSize }})
+            {{ $t('game.viewSaved') }} ({{ inHand.length - maxHandSize }})
           </template>
         </GameCardLabel>
       </div>
@@ -121,6 +121,10 @@ export default {
       type: Array,
       required: true
     }
+  },
+  created () {
+    // const locale = require('@/src/locales/play/down-to-five/en')
+    // this.$i18n.messages = { ...this.$i18n, ...locale }
   },
   methods: {
     openModal (modalData) {

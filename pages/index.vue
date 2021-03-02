@@ -1,37 +1,43 @@
 <template>
   <div class="index">
-    <div class="access">
-      <vInput
-        type="text"
-        placeholder="Username"
-        name="username"
-      />
-      <vInput
-        type="password"
-        placeholder="Password"
-        name="password"
-      />
-      <vButton @click="login">
-        Login
-      </vButton>
-      <vButton @click="register">
-        Register
-      </vButton>
+    <div class="spacer" />
+    <ThePathfinderTitleSequence @title-sequence-completed="toggleShowButton" />
+    <div class="start">
+      <TransitionSlideUp class="button-wrapper">
+        <div
+          v-if="showButton"
+          key="start-button"
+        >
+          <vButton
+            @click="goToWelcome"
+          >
+            Start The Pathfinder
+          </vButton>
+        </div>
+      </TransitionSlideUp>
     </div>
+    <div class="spacer" />
   </div>
 </template>
 
 <script>
-import vInput from '@/components/ui/vInput'
+import ThePathfinderTitleSequence from '@/components/animated/ThePathfinderTitleSequence'
 import vButton from '@/components/ui/vButton'
+import TransitionSlideUp from '@/components/ui/TransitionSlideUp'
 export default {
-  components: { vInput, vButton },
+  components: { ThePathfinderTitleSequence, vButton, TransitionSlideUp },
+  data () {
+    return {
+      showButton: false
+    }
+  },
   methods: {
-    login () {
-      this.$router.push({ name: 'play-explore' })
+    goToWelcome () {
+      this.$router.push({ name: 'welcome' })
     },
-    register () {
-      this.$router.push({ name: 'play-explore' })
+    toggleShowButton () {
+      console.log('got emit')
+      this.showButton = !this.showButton
     }
   }
 }
@@ -41,15 +47,13 @@ export default {
 .index {
   height: 100vh;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: $dark;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 5rem 1fr 0.25fr 5rem;
 }
-
-.access {
-  button {
-    display: block;
-    width: 100%;
-  }
+.button-wrapper {
+  display: flex;
+  justify-content: center;
 }
 </style>

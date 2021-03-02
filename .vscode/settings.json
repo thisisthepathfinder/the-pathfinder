@@ -6,4 +6,7 @@
     "tab.unfocusedActiveBackground" : "#325b6b",
     "tab.unfocusedActiveForeground": "#eeeeee",
   },
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ],
 }
